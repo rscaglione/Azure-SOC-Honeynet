@@ -44,44 +44,55 @@ In the "BEFORE" measurements, everything was set up and accessible from the inte
 In the "AFTER" measurements, I improved security. I restricted access to the Virtual Machines by only allowing traffic from my admin workstation. Additionally, I enhanced protection for other resources by using their built-in firewalls and Private Endpoints.
 
 ## Attack Maps Before Hardening / Security Controls
-![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/1qvswSX.png)<br>
+<!-- ![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/1qvswSX.png)<br>
 ![Linux Syslog Auth Failures](https://i.imgur.com/G1YgZt6.png)<br>
-![Windows RDP/SMB Auth Failures](https://i.imgur.com/ESr9Dlv.png)<br>
+![Windows RDP/SMB Auth Failures](https://i.imgur.com/ESr9Dlv.png)<br> -->
+![image](https://github.com/rscaglione/Azure-SOC-Honeynet/assets/54590449/ad19db41-0d97-4662-8c0f-578f0066ac6e)
+_______________________________________________________________________________________________________________
+![image](https://github.com/rscaglione/Azure-SOC-Honeynet/assets/54590449/76d1222a-98fd-4f46-a894-82fea879f5fa)
+_______________________________________________________________________________________________________________
+![image](https://github.com/rscaglione/Azure-SOC-Honeynet/assets/54590449/a03eb400-7834-4314-89c0-680f3c474eef)
+_______________________________________________________________________________________________________________
+![image](https://github.com/rscaglione/Azure-SOC-Honeynet/assets/54590449/d1d4782b-810c-4456-8952-7cf8871c83be)
+_______________________________________________________________________________________________________________
+
+
+
+
 
 ## Metrics Before Hardening / Security Controls
 
-The following table shows the metrics we measured in our insecure environment for 24 hours:
-Start Time 2023-03-15 17:04:29
-Stop Time 2023-03-16 17:04:29
+Here are the metrics that were measured in the insecure environment for 24 hours:
+<br>Start Time 2023-11-17 T19:29:49</br>
+Stop Time 2023-11-18 T19:29:49
 
 | Metric                   | Count
 | ------------------------ | -----
-| SecurityEvent            | 19470
-| Syslog                   | 3028
-| SecurityAlert            | 10
-| SecurityIncident         | 348
-| AzureNetworkAnalytics_CL | 843
+| SecurityEvent            | 161562
+| Syslog                   | 15338
+| SecurityAlert            | 9
+| SecurityIncident         | 461
+| AzureNetworkAnalytics_CL | 4620
 
-## Attack Maps Before Hardening / Security Controls
+## Attack Maps After Hardening / Security Controls
 
-```All map queries actually returned no results due to no instances of malicious activity for the 24 hour period after hardening.```
+```None of the map queries showed any results because there were no instances of harmful activities during the 24-hour period after implementing security measures.```
 
 ## Metrics After Hardening / Security Controls
 
 The following table shows the metrics we measured in our environment for another 24 hours, but after we have applied security controls:
-Start Time 2023-03-18 15:37
-Stop Time	2023-03-19 15:37
+<br>Start Time 2023-11-23 T17:15:02</br>
+Stop Time	2023-11-24 T17:15:02
 
 | Metric                   | Count
 | ------------------------ | -----
-| SecurityEvent            | 8778
-| Syslog                   | 25
+| SecurityEvent            | 7945
+| Syslog                   | 1
 | SecurityAlert            | 0
 | SecurityIncident         | 0
 | AzureNetworkAnalytics_CL | 0
 
 ## Conclusion
 
-In this project, a mini honeynet was constructed in Microsoft Azure and log sources were integrated into a Log Analytics workspace. Microsoft Sentinel was employed to trigger alerts and create incidents based on the ingested logs. Additionally, metrics were measured in the insecure environment before security controls were applied, and then again after implementing security measures. It is noteworthy that the number of security events and incidents were drastically reduced after the security controls were applied, demonstrating their effectiveness.
+In this project, I set up a small security system in Microsoft Azure, bringing together various logs into a Log Analytics workspace. I used Microsoft Sentinel to detect issues and create incident reports based on these logs. I also measured security metrics in the less secure setup before making it more secure and then checked again afterward. Importantly, the number of security problems significantly decreased after implementing these security measures, showing that they are effective.
 
-It is worth noting that if the resources within the network were heavily utilized by regular users, it is likely that more security events and alerts may have been generated within the 24-hour period following the implementation of the security controls.
