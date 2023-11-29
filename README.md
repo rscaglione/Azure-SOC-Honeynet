@@ -29,7 +29,7 @@ To make sure the system was working well, I first checked how secure it was in a
 ![image](https://github.com/rscaglione/Azure-SOC-Honeynet/assets/54590449/c3fa5ef4-c69e-4ce9-bb71-f58f9e124430)
 
 
-The components forming the foundation of the compact honeynet in Azure include:
+The components included in the compact honeynet in Azure are:
 
 - Virtual Network (VNet)
 - Network Security Group (NSG)
@@ -63,8 +63,8 @@ ________________________________________________________________________________
 ## Metrics Before Hardening / Security Controls
 
 Here are the metrics that were measured in the insecure environment for 24 hours:
-<br>Start Time 2023-11-17 T19:29:49</br>
-Stop Time 2023-11-18 T19:29:49
+<br>Start Time 2023-11-17 19:29:49</br>
+Stop Time 2023-11-18 19:29:49
 
 | Metric                   | Count
 | ------------------------ | -----
@@ -81,8 +81,8 @@ Stop Time 2023-11-18 T19:29:49
 ## Metrics After Hardening / Security Controls
 
 The following table shows the metrics measured in the environment for another 24 hours, but after the security controls were applied:
-<br>Start Time 2023-11-23 T17:15:02</br>
-Stop Time	2023-11-24 T17:15:02
+<br>Start Time 2023-11-23 17:15:02</br>
+Stop Time	2023-11-24 17:15:02
 
 | Metric                   | Count
 | ------------------------ | -----
