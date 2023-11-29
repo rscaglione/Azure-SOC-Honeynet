@@ -1,13 +1,13 @@
-# Building a SOC + Honeynet in Azure (Live Traffic)
+# Creating a Security Operations Center (SOC) and Honeynet with Live Traffic in Azure
 <!-- ![Cloud Honeynet / SOC](https://i.imgur.com/ZWxe03e.jpg) -->
 ![image](https://github.com/rscaglione/Azure-SOC-Honeynet/assets/54590449/7dae6161-c8e1-4330-81f0-506c3f4cffab)
 
 
 ## Introduction
 
-In this project, I set up a small security system in Microsoft's Azure cloud platform. I gathered information about potential cyber threats from different sources and organized it in a central place called a Log Analytics workspace. Then, I used a tool called Microsoft Sentinel to create maps that show how cyber attacks happen, set up alerts to warn us about potential issues, and documented any incidents that occurred.
+In this project, I set up a small security system in Microsoft's Azure cloud platform. I gathered information about potential cyber threats from different sources and organized it in the Log Analytics workspace. Then, I used Microsoft Sentinel to create maps that show how cyber attacks happen, set up alerts to warn about potential issues, and documented any incidents that occurred.
 
-To make sure our system was working well, I first checked how secure it was in a test environment for a day. After identifying areas where it could be better, I added extra safeguards to make it tougher for cyber threats. Then, I checked again for another day to see if the improvements worked. The information and results I'll share include various measurements related to security.
+To make sure the system was working well, I first checked how secure it was in a test environment for a day. After identifying areas where it could be better, I added extra safeguards to make it more resilient against cyber threats. Then, I checked again for another day to see if the improvements worked. The information and results I'll share include various measurements related to security.
 
 - SecurityEvent (Windows Event Logs)
 - Syslog (Linux Event Logs)
@@ -29,7 +29,7 @@ To make sure our system was working well, I first checked how secure it was in a
 ![image](https://github.com/rscaglione/Azure-SOC-Honeynet/assets/54590449/c3fa5ef4-c69e-4ce9-bb71-f58f9e124430)
 
 
-The structure of the small honeynet in Azure comprises the following elements:
+The components forming the foundation of the compact honeynet in Azure include:
 
 - Virtual Network (VNet)
 - Network Security Group (NSG)
